@@ -4,5 +4,5 @@ WORKDIR /app
 COPY . /app
 RUN apt-get update
 RUN pip install -r requirements.txt
-RUN echo "HTTP RESPONSE CODE TEST"
+RUN echo "HTTP RESPONSE TEST"
 CMD ["python", "/app/response.py"]

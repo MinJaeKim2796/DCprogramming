@@ -1,5 +1,5 @@
 FROM python:latest
-MAINTAINER khu_swcon "kmj5596@khu.ac.kr"
+MAINTAINER minj2796 "kmj5596@khu.ac.kr"
 WORKDIR /app
 COPY . /app
 RUN apt-get update

@@ -1,0 +1,7 @@
+flask
+click
+itsdangerous
+Jinja2
+uWSGI
+MarkupSafe
+Werkzeug

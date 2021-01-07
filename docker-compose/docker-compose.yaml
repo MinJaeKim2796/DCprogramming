@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  flask:
+    build: ./flask
+    container_name: dcprogramming_flask
+    restart: always
+    expose:
+      - 8080
+
+  nginx:
+    build: ./nginx
+    container_name: dcprogramming_nginx
+    restart: always
+    ports:
+      - "8000:80"

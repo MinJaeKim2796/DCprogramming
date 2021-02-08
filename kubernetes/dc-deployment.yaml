@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dc-flask
+  labels:
+    name: dc-flask
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: dc-flask
+  template:
+    metadata:
+      name: dc-flask
+      labels:
+        name: dc-flask
+    spec:
+      containers:
+        - name: dc-flask
+          image: minj2796/dc_flask:2.0
+          ports:
+            - containerPort: 5000

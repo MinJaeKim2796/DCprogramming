@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>DC programming3</title>
+	<style type='text/css'>
+		#clock{
+			position: absolute;
+			top: 50%;
+			left: 50%;	
+			transform: translateX(-50%) translateY(-50%);
+			color: #0073EC;
+			font-size:50px;
+			font-weight: bold;
+		}
+		#time_over{
+			font-size:20px;
+			font-weight: bold;
+		}
+		.my-form{
+			position: absolute;
+			top: 60%;
+			left: 50%;	
+			transform: translateX(-50%) translateY(-50%);
+			color: #fff;
+		}
+	</style>
+	
+	<script language='javascript'>
+		var connected_time = new Date();
+		function curr_time(){
+		var date = new Date();
+		var hour = date.getHours();
+		var minute = date.getMinutes();
+		var second = date.getSeconds();
+		var meridiem = (hour < 12) ? "AM" : "PM";
+		hour = (hour > 12) ? hour-12 : hour;
+		hour = ("0" + hour).slice(-2);
+		minute = ("0" + minute).slice(-2);
+		second = ("0" + second).slice(-2);
+		var result = Math.ceil((date-connected_time)/1000);
+		document.getElementById('clock').innerHTML = hour + " : " + minute + " : " + second + " "+ meridiem;
+		document.getElementById('time_over').innerHTML = "Connection Time : " + result + "s";
+		var t = setTimeout(curr_time, 1000);
+		}
+</script>
+
+	<script language='javascript'>
+		function go_to_url(){
+		var url= document.forms[0].elements['name'].value;
+		window.location = url;
+		return false;
+		}
+	</script>
+</head>
+
+<body onload='curr_time()'>
+	<div id='clock'></div>
+	<form onsubmit="return go_to_url();", class="my-form">
+		<input type = "text" name="name">
+		<input type = "submit" value="Go to URL">
+	</form>
+	<em><div id = 'time_over'></div></em>
+</body>
+</html>

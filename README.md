@@ -20,22 +20,22 @@ URL : https://hub.docker.com/r/minj2796/pythontest
 
 ### 2. [docker-compose](https://github.com/MinJaeKim2796/DCprogramming/tree/main/docker-compose) : Duration Time TEST
 
-  1) flask
+  1) flask : https://hub.docker.com/r/minj2796/dc_flask
   
-  2) nginx
+  2) nginx : https://hub.docker.com/r/minj2796/dc_nginx
 
   3) docker-compose.yaml
  
  
  
-### 3. [kubernetes]() : Duration Time TEST
+### 3. [kubernetes](https://github.com/MinJaeKim2796/DCprogramming/tree/main/kubernetes) : Duration Time TEST
 
   1) templates
   
-  2) app.py
+  2) Dockerfile
+  
+  3) app.py
 
-  3) dc-deployment.yaml
+  4) dc-deployment.yaml
 
-  4) dc-service.yaml
-
-  5) Dockerfile
+  5) dc-service.yaml
